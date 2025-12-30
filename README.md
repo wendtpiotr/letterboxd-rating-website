@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a clean, modern, and structured README.md template designed specifically for your movie rating logic and question schema. 🎬 Movie Rating Logic & Question Schema
 
-## Getting Started
+A structured JSON-based framework for generating weighted movie reviews. This system uses Universal Metrics (applied to all films) and Genre-Specific Metrics to calculate a precise, balanced score based on what actually matters for that specific genre. 🚀 Overview
 
-First, run the development server:
+Not all movies should be judged by the same criteria. A Horror film's success depends on atmosphere, while a Comedy lives or dies by its humor. This project provides a robust schema of QUESTIONS that:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+⚖️ Weights Importance: Assigns higher value to critical genre elements (e.g., 1.5 for Comedy humor).
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🎯 Targeted Focus: Provides focusAreas to help reviewers know exactly what to look for.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+🌐 Universal Baseline: Ensures every movie is still rated on core cinematic pillars like Story, Acting, and Visuals.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+🛠️ Schema Structure
 
-## Learn More
+The QUESTIONS object is split into two primary segments:
 
-To learn more about Next.js, take a look at the following resources:
+    Universal Questions 🌍
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Applied to every single movie regardless of genre.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Categories: Story, Pacing, Acting, Visuals, Soundtrack, Emotional Impact, Originality, and Satisfaction.
 
-## Deploy on Vercel
+    Genre-Specific Questions 🎭
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Injected dynamically based on the movie's genre. Genre Key Metrics Primary Weight Action 💥 Choreography, Clarity, Stakes 1.4 Horror 👻 Atmosphere, Scares, Sound Design 1.4 Comedy 😂 Humor, Timing, Consistency 1.5 Sci-Fi 🚀 Worldbuilding, Concepts, Effects 1.3 Romance ❤️ Chemistry, Believability, Emotional Beats 1.5 Drama 🎭 Character Depth, Dialogue, Themes 1.4 📦 Implementation Example
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Each question object is designed to be easily mapped to a UI component (like a slider or star rating): JavaScript
+
+{ id: 'choreography', text: 'How exciting were the action sequences?', weight: 1.4, focusAreas: ['Fight choreography', 'Creativity', 'Spectacle', 'Intensity'] }
+
+How to Calculate the Weighted Score 🧮
+
+To get a final score out of 10:
+
+Multiply each rating (0-10) by its weight.
+
+Sum those values.
+
+Divide by the sum of all weights used.
+
+FinalScore=∑Weights∑(Rating×Weight)​ 📂 Genres Included
+
+🏃 Action
+
+🎭 Drama / Crime / Western
+
+😱 Horror / Thriller / Mystery
+
+😂 Comedy
+
+🛸 Sci-Fi / Fantasy
+
+💖 Romance
+
+🎨 Animation
+
+🌍 Adventure
+
+📽️ Documentary
+
