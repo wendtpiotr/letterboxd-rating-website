@@ -1,6 +1,6 @@
 import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
-
+import { Analytics } from "@vercel/analytics/next"
 // Configure Geist fonts
 const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -31,6 +31,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
     return (
         <html lang="en" suppressHydrationWarning>
+        <Analytics />
         <head>
             <style dangerouslySetInnerHTML={{ __html: `
           .perspective-1000 {
