@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono, Inter } from "next/font/google";
+import { Geist, Geist_Mono, Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next"
 // Configure Geist fonts
@@ -28,6 +28,13 @@ export const metadata = {
     viewport: "width=device-width, initial-scale=1",
 };
 
+const poppins = Poppins({
+    subsets: ["latin"],
+    weight: ["400", "700", "900"],
+    display: "swap",
+    variable: "--font-poppins",
+})
+
 export default function RootLayout({ children }) {
     return (
         <html lang="en" suppressHydrationWarning>
@@ -43,15 +50,7 @@ export default function RootLayout({ children }) {
             <meta name="description" content={metadata.description} />
             <title>{metadata.title}</title>
         </head>
-        <body
-            className={`
-          ${geistSans.variable} 
-          ${geistMono.variable} 
-          ${inter.variable} 
-          ${inter.className} 
-          antialiased
-        `}
-        >
+        <body className={`${poppins} antialiased`}>
         {children}
         </body>
         </html>
