@@ -31,7 +31,6 @@ export const metadata = {
 export default function RootLayout({ children }) {
     return (
         <html lang="en" suppressHydrationWarning>
-        <Analytics />
         <head>
             <style dangerouslySetInnerHTML={{ __html: `
           .perspective-1000 {
@@ -53,6 +52,7 @@ export default function RootLayout({ children }) {
         `}
         >
         {children}
+        <Analytics />
         </body>
         </html>
     );
