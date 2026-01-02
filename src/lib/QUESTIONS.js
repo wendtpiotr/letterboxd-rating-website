@@ -61,6 +61,38 @@ export const QUESTIONS = {
             focusAreas: ['Closure', 'Payoff', 'Final impression']
         }
     ],
+    Action: [
+        {
+            id: 'action_scenes',
+            text: 'How exciting were the action scenes?',
+            weight: 1.5,
+            focusAreas: ['Intensity', 'Choreography', 'Impact']
+        },
+        {
+            id: 'stunts',
+            text: 'How impressive were the stunts and set pieces?',
+            weight: 1.3,
+            focusAreas: ['Execution', 'Scale']
+        },
+        {
+            id: 'energy',
+            text: 'How energetic did the movie feel?',
+            weight: 1.2,
+            focusAreas: ['Momentum', 'Adrenaline']
+        },
+        {
+            id: 'clarity',
+            text: 'How clear and readable was the action?',
+            weight: 1.1,
+            focusAreas: ['Editing', 'Visual clarity']
+        },
+        {
+            id: 'action_satisfaction',
+            text: 'How satisfying was it as an action movie?',
+            weight: 1.4,
+            focusAreas: ['Genre payoff']
+        }
+    ],
 
     Adventure: [
         {
@@ -127,6 +159,38 @@ export const QUESTIONS = {
             focusAreas: ['Genre success']
         }
     ],
+    Comedy: [
+        {
+            id: 'humor',
+            text: 'How funny was the movie?',
+            weight: 1.5,
+            focusAreas: ['Jokes', 'Laughs']
+        },
+        {
+            id: 'timing',
+            text: 'How good was the comedic timing?',
+            weight: 1.3,
+            focusAreas: ['Delivery', 'Pacing']
+        },
+        {
+            id: 'characters',
+            text: 'How well did the characters contribute to the comedy?',
+            weight: 1.2,
+            focusAreas: ['Personality', 'Interactions']
+        },
+        {
+            id: 'variety',
+            text: 'How varied was the humor?',
+            weight: 1.1,
+            focusAreas: ['Situational', 'Verbal', 'Physical']
+        },
+        {
+            id: 'comedy_satisfaction',
+            text: 'How satisfying was it as a comedy?',
+            weight: 1.4,
+            focusAreas: ['Genre payoff']
+        }
+    ],
 
     Crime: [
         {
@@ -156,6 +220,38 @@ export const QUESTIONS = {
         {
             id: 'crime_satisfaction',
             text: 'How satisfying was it as a crime movie?',
+            weight: 1.4,
+            focusAreas: ['Genre payoff']
+        }
+    ],
+    Drama: [
+        {
+            id: 'emotional_depth',
+            text: 'How emotionally deep was the story?',
+            weight: 1.5,
+            focusAreas: ['Emotions', 'Resonance']
+        },
+        {
+            id: 'performances',
+            text: 'How powerful were the performances?',
+            weight: 1.4,
+            focusAreas: ['Acting', 'Authenticity']
+        },
+        {
+            id: 'themes',
+            text: 'How well were the themes explored?',
+            weight: 1.3,
+            focusAreas: ['Meaning', 'Subtext']
+        },
+        {
+            id: 'conflict',
+            text: 'How compelling were the dramatic conflicts?',
+            weight: 1.2,
+            focusAreas: ['Tension', 'Stakes']
+        },
+        {
+            id: 'drama_satisfaction',
+            text: 'How satisfying was it as a drama?',
             weight: 1.4,
             focusAreas: ['Genre payoff']
         }
@@ -390,5 +486,38 @@ export const QUESTIONS = {
             weight: 1.4,
             focusAreas: ['Genre payoff']
         }
+    ],
+    Horror: [
+        {
+            id: 'scares',
+            text: 'How effective were the scares?',
+            weight: 1.5,
+            focusAreas: ['Fear', 'Shock']
+        },
+        {
+            id: 'atmosphere',
+            text: 'How strong was the horror atmosphere?',
+            weight: 1.4,
+            focusAreas: ['Mood', 'Tension']
+        },
+        {
+            id: 'creepiness',
+            text: 'How unsettling did the movie feel?',
+            weight: 1.3,
+            focusAreas: ['Unease', 'Dread']
+        },
+        {
+            id: 'originality',
+            text: 'How original were the horror ideas?',
+            weight: 1.2,
+            focusAreas: ['Fresh scares', 'Concepts']
+        },
+        {
+            id: 'horror_satisfaction',
+            text: 'How satisfying was it as a horror movie?',
+            weight: 1.4,
+            focusAreas: ['Genre payoff']
+        }
     ]
+
 }
